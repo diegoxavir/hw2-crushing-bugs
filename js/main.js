@@ -29,10 +29,30 @@ function changeBGImage() {
 	//if (draggedPiece) {
 	//	return
 	//}
-	//if (draggedPiece) {
-	//
-	//	console.log('zone already taken');
+
+//	function handleStartDrag() {
+//		requestIdleCallback;
+//	}
+
+//if (this.handleDrop) {
+//	draggedPiece = null;
+//}
+
+	//puzzlePieces.forEach() {
+	//	if (this.parent)
+	//	return;
 	//}
+
+	//puzzlePieces.forEach(piece => {
+	//	if (this.parent)
+	//	return;
+	//)}
+
+	puzzlePieces.forEach(piece => {
+        document.querySelector(".puzzle-pieces").appendChild(piece);
+		console.log('pieces reset');
+    });
+
 	puzzleBoard.style.backgroundImage = `url(images/backGround${this.id}.jpg)`;
 }
 
