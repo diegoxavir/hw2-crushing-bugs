@@ -1,6 +1,6 @@
 # Drag and Drop Reference
 
-This webpage hosts a puzzle game featuring 4 different boards! Just drag a peice from the left into the blurred out board on the right. To change the board click on the images below. 
+This webpage hosts a puzzle game featuring 4 different boards! These boards consist of a tree house in the woods, a fort in a field, a view of a planet from space, and two mechanical beings looking at one another. Just drag a piece from the left into the blurred out board on the right to place the piece. To change the board click on the images below. 
 
 ## Contributing
 
