@@ -11,6 +11,7 @@ let theButtons = document.querySelectorAll("#buttonHolder img"),
 	puzzleBoard = document.querySelector(".puzzle-board"),
 	puzzlePieces = document.querySelectorAll(".puzzle-pieces img"),
 	dropZones = document.querySelectorAll('.drop-zone'),
+	reset = document.querySelector('#resetBut'),
 	// store the dragged piece in a global variable
 	// because we need it in the handleDrop function
 	draggedPiece;
@@ -53,7 +54,39 @@ function changeBGImage() {
 		console.log('pieces reset');
     });
 
-	puzzleBoard.style.backgroundImage = `url(images/backGround${this.id}.jpg)`;
+	
+    
+	
+	 puzzleBoard.style.backgroundImage = `url(images/backGround${this.id}.jpg)`;
+
+
+
+	 	/*Bonus bug
+	if (url(images/backGround1.jpg)) {
+		puzzlePieces = `url(images/bottomLeft${this.id}.jpg)`;
+	}
+	*/
+
+	let bgImageID = this.id;
+	
+	 puzzlePieces.forEach(piece => {
+
+        if (piece.alt === "top left") {
+            piece.src = `images/topLeft${bgImageID}.jpg`;
+        }
+        if (piece.alt === "top right") {
+            piece.src = `images/topRight${bgImageID}.jpg`;
+        }
+        if (piece.alt === "bottom left") {
+            piece.src = `images/bottomLeft${bgImageID}.jpg`;
+        }
+        if (piece.alt === "bottom right") {
+            piece.src = `images/bottomRight${bgImageID}.jpg`;
+        }
+
+		
+    });
+
 }
 
 function handleStartDrag() { 
@@ -98,7 +131,16 @@ function handleDrop(event) {
 //bug fix here-check condition
 
 this.appendChild(draggedPiece)
+
 }
+
+function resetButton(event) {
+	puzzlePieces.forEach(piece => {
+        document.querySelector(".puzzle-pieces").appendChild(piece);
+		console.log('pieces reset');
+    });
+}
+
 // 1 to many event handling
 // add event handling to each button in the collection of buttons, one at a time
 theButtons.forEach(button => button.addEventListener("click", changeBGImage));
@@ -110,3 +152,4 @@ dropZones.forEach(zone => zone.addEventListener('dragover', handleDragOver));
 
 dropZones.forEach(zone => zone.addEventListener('drop', handleDrop));
 
+reset.forEach(reset => reset.addEventListener('reset', resetButton))

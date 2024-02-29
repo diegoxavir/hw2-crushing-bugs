@@ -24,3 +24,5 @@ javascript I will refer to another in calss build regarding "if functions" for g
 
 Problem 2 is that the peices position do not reset when a board is chosen. To fix this I will attempt to reset the piece by telling the javascript to use existing functions to return the pieces to where they came from.
 After much trial and error I could not get the original soloution to work, so I will now instead tell Javascript to place the pieces into areas with a ".puzzlepieces" class using appendchild like we did to put it into the dropzone, rather than to return to their original location. They are the same end point, but Javascripts understanding of how the pieces got there will change.
+
+For the bonus bug I am going to do an if command in the change background image function to change the piece image source depending on the background image id.
