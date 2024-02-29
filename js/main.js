@@ -152,4 +152,8 @@ dropZones.forEach(zone => zone.addEventListener('dragover', handleDragOver));
 
 dropZones.forEach(zone => zone.addEventListener('drop', handleDrop));
 
-reset.forEach(reset => reset.addEventListener('reset', resetButton))
+
+//Bonus Bug 2
+//reset.forEach(reset => reset.addEventListener('click', resetButton))
+
+reset.addEventListener('click', resetButton);
