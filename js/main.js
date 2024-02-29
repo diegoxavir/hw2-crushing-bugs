@@ -99,11 +99,17 @@ function handleStartDrag() {
 function handleDragOver(event) {
 	event.preventDefault();
 	console.log('dragged over a zone');
+
+
 }
 
 function handleDrop(event) {
 	event.preventDefault();
-	console.log('dropped on the zone')
+	console.log('dropped on the zone');
+	//bug 3
+		if(this.id === "buttonHolder") {
+		return;
+	}
 	
 //	if (puzzlePieces ) 
 //	if (handleDrop) {
